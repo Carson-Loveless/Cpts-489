@@ -5,6 +5,9 @@
     width: 95%;
     padding: 5px;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .navbar-right{
@@ -12,9 +15,6 @@
 }
 
 .navbar a{
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
     color:white;
     text-decoration: none;
     float: left;
@@ -32,4 +32,42 @@
 .navbar a.active{
     background-color: white;
     color: #9c0808;
+}
+
+.search-bar {
+    padding: 5px;
+    margin-top: 10px;
+    margin:auto;
+    width: 30%;
+    display:flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input[type=text] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    height: 30px;
+    padding:2px;
+    margin:0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar button{
+    background: #9c0808;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.search-bar button:hover{
+    background: #5f0606;
+}
+
+.search-bar img{
+    height: 25px;
+    width: 25px;
+    padding: 0px;
+    margin:0px;
 }
