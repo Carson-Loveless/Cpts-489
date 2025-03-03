@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: stretch;
     background-color: #f4f4f9;
@@ -13,6 +12,7 @@ body {
     width: 60%;
     display: flex;
     gap: 25px;
+    justify-self: center;
 }
 
 .box {
