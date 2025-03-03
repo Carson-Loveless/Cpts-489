@@ -150,6 +150,7 @@ h3 {
     box-shadow: 2px 2px 10px black;
     font-family: 'Roboto', sans-serif;
     border: 2px;
+    display: block;
 }
 
 .item .image-container {
@@ -161,6 +162,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .item img {
@@ -176,6 +178,46 @@ h3 {
 }
 
 .item ul li {
-    margin: 5px 0;
+    margin: 5px;
     justify-self: left;
+}
+
+.admin-dropdown{
+    z-index: 3;
+    justify-self: right;
+}
+
+.admin-dropdown img{
+    height: 30px;
+    width: auto;
+}
+
+.admin-options{
+    display: none;
+    position: absolute;
+    overflow: auto;
+    padding: 5px;
+    z-index: inherit;
+    text-justify: left;
+    width: 120px;
+}
+
+.admin-options a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    background: white;
+    text-justify: left;
+    padding: 10px;
+}
+
+.admin-options a:hover {
+    color: white;
+    background-color: #5f0606;
+    border-radius: 8px;
+}
+
+.admin-dropdown:hover .admin-options {
+    display: block;
+    background: #5f0606;
 }
