@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/home-style.css">
+    <link rel="stylesheet" href="/stylesheets/navbar-style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+        <a href="/create-listing">Create Listing</a>
+        <a href="/messages">Messages</a>
+        <div class="navbar-right">
+            <a href="/help">Help</a>
+            <a href="/account">Account</a>
+            <a href="/signup">Sign up</a>
+            <a href="/login">Log in</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><img src="/images/search-icon.png"></button>
+        </div>
+        <div class="filter-container">
+            <h3>Filters</h3>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="textbook"> Textbooks
+                <span class="checkmark"></span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="furniture"> Furniture
+                <span class="checkmark"></span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="other"> Other (Location, Price, etc)
+                <span class="checkmark"></span>
+            </label>
+            <button class="apply-filters">Apply Filters</button>
+        </div>
+        <div class="item-grid">
+            <div class="item">
+                <div class="image-container">
+                    <img src="/images/book.png" alt="Book 1">
+                </div>
+                <h3>Textbook 1</h3>
+                <ul>
+                    <li><b>Price: </b>$20</li>
+                    <li><b>Description: </b>Textbook for a class.</li>
+                    <li><b>Quality: </b> Like New</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img src="/images/desk_chair.png" alt="Item 3">
+                </div>
+                <h3>Chair 1</h3>
+                <ul>
+                    <li><b>Price: </b>$35</li>
+                    <li><b>Description: </b>Solid deskchair.</li>
+                    <li><b>Quality: </b>Good</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img src="/images/book.png" alt="Book 1">
+                </div>
+                <h3>Textbook 2</h3>
+                <ul>
+                    <li><b>Price: </b>$5</li>
+                    <li><b>Description: </b>Slight wear and tear.</li>
+                    <li><b>Quality: </b>Fair</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="image-container">
+                    <img src="/images/desk_chair.png" alt="Chair 2">
+                </div>
+                <h3>Chair </h3>
+                <ul>
+                    <li><b>Price: </b>$50</li>
+                    <li><b>Description: </b>High-quality chair, barely used.</li>
+                    <li><b>Quality: </b>Like New</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
