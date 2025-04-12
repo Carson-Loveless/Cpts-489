@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Home Page</title>
+    <title>Home Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/admin-home-style.css">
+    <link rel="stylesheet" href="/stylesheets/home-style.css">
     <link rel="stylesheet" href="/stylesheets/navbar-style.css">
 </head>
 
 <body>
     <div class="navbar">
-        <a class="active" href="../admin-home-page/admin-home-page.html">Admin Home</a>
+        <a class="active" href="/">Home</a>
+        <a href="/create-listing">Create Listing</a>
+        <a href="/messages">Messages</a>
         <div class="navbar-right">
-            <a href="../account-page/account.html">Account</a>
+            <a href="/help">Help</a>
+            <a href="/account">Account</a>
+            <a href="/signup">Sign up</a>
+            <a href="/login">Log in</a>
         </div>
     </div>
     <div class="container">
@@ -33,7 +38,7 @@
                 <span class="checkmark"></span>
             </label>
             <label class="filter-option">
-                <input type="checkbox" name="filter" value="other"> Other
+                <input type="checkbox" name="filter" value="other"> Other (Location, Price, etc)
                 <span class="checkmark"></span>
             </label>
             <button class="apply-filters">Apply Filters</button>
@@ -48,17 +53,7 @@
                     <li><b>Price: </b>$20</li>
                     <li><b>Description: </b>Textbook for a class.</li>
                     <li><b>Quality: </b> Like New</li>
-                    <li><b>User: </b>example_user1</li>
                 </ul>
-                <div class="admin-dropdown">
-                    <button><img src="../images/dropdown.png" alt="Book 1"></button>
-                    <div class="admin-options">
-                        <a href="#">Flag Post</a>
-                        <a href="#">Flag User</a>
-                        <a href="#">Remove Post</a>
-                        <a href="#">Ban User</a>
-                    </div>
-                </div>
             </div>
             <div class="item">
                 <div class="image-container">
@@ -69,17 +64,7 @@
                     <li><b>Price: </b>$35</li>
                     <li><b>Description: </b>Solid deskchair.</li>
                     <li><b>Quality: </b>Good</li>
-                    <li><b>User: </b>example_user2</li>
                 </ul>
-                <div class="admin-dropdown">
-                    <button><img src="../images/dropdown.png" alt="Book 1"></button>
-                    <div class="admin-options">
-                        <a href="#">Flag Post</a>
-                        <a href="#">Flag User</a>
-                        <a href="#">Remove Post</a>
-                        <a href="#">Ban User</a>
-                    </div>
-                </div>
             </div>
             <div class="item">
                 <div class="image-container">
@@ -90,17 +75,7 @@
                     <li><b>Price: </b>$5</li>
                     <li><b>Description: </b>Slight wear and tear.</li>
                     <li><b>Quality: </b>Fair</li>
-                    <li><b>User: </b>example_user3</li>
                 </ul>
-                <div class="admin-dropdown">
-                    <button><img src="../images/dropdown.png" alt="Book 1"></button>
-                    <div class="admin-options">
-                        <a href="#">Flag Post</a>
-                        <a href="#">Flag User</a>
-                        <a href="#">Remove Post</a>
-                        <a href="#">Ban User</a>
-                    </div>
-                </div>
             </div>
             <div class="item">
                 <div class="image-container">
@@ -111,21 +86,11 @@
                     <li><b>Price: </b>$50</li>
                     <li><b>Description: </b>High-quality chair, barely used.</li>
                     <li><b>Quality: </b>Like New</li>
-                    <li><b>User: </b>example_user4</li>
                 </ul>
-                <div class="admin-dropdown">
-                    <button><img src="../images/dropdown.png" alt="Book 1"></button>
-                    <div class="admin-options">
-                        <a href="#">Flag Post</a>
-                        <a href="#">Flag User</a>
-                        <a href="#">Remove Post</a>
-                        <a href="#">Ban User</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 </body>
 
 </html>
