@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-
-var usersRouter = require('./routes/users');
 var homeRouter = require('./routes/home');
 var loginRouter = require('./routes/login');
 var singupRouter = require('./routes/signup');
@@ -29,7 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', homeRouter);
-app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/signup', singupRouter);
 app.use('/create-listing', createListingRouter);
