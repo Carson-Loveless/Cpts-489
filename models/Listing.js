@@ -26,6 +26,7 @@ Listing.init({
     },
     userid: {
         type: DataTypes.INTEGER,
+        allowNull: false,
     },
 }, {
     sequelize,

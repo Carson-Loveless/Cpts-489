@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
 
 async function setup() {
     // Create the database tables if they don't exist
-    const test = await Listing.create({title: "test", description: "test", quality: "good", price: 100.99});
+    const test = await Listing.create({title: "test", description: "test", quality: "good", price: 100.99, userid: 99});
     const test2 = await User.create({username: "test", password: "test", email: "email@email.com", university: "university"});
     console.log("Test user and listing created");
 }
