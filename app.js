@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const session = require('express-session')
 
 const sequelize = require('./db');
 const Listing = require('./models/Listing');
@@ -30,6 +31,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+    secret: 'wsu489',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}))
 
 app.use('/', homeRouter);
 app.use('/login', loginRouter);
@@ -60,7 +69,7 @@ app.use(function(err, req, res, next) {
 async function setup() {
     // Create the database tables if they don't exist
     const test = await Listing.create({title: "test", description: "test", quality: "good", price: 100.99, userid: 99});
-    const test2 = await User.create({username: "test", password: "test", email: "email@email.com", university: "university"});
+    const test2 = await User.create({username: "carson", password: "111", email: "carson@gmail.com", name: "Carson Loveless"});
     console.log("Test user and listing created");
 }
 
