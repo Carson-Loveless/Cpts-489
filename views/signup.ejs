@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheets/signup-style.css">
 </head>
+
 <body>
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <form action="#" method="POST" class="signup-form">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+
+        <% if (error) { %>
+            <div class="error-message">
+                <%= error %>
             </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-                <label for="university">University</label>
-                <input type="text" id="university" name="university" required>
-            </div>
-            <button type="submit" class="signup-btn">Sign Up</button>
-        </form>
-        <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            <% } %>
+
+                <form action="/signup" method="POST" class="signup-form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                </form>
+
+                <p class="login-link">Already have an account? <a href="/login">Login</a></p>
     </div>
 </body>
+
 </html>
