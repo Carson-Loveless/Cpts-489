@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const sequelize = require('./db');
+const Listing = require('./models/Listing');
+const User = require('./models/User');
+
 var homeRouter = require('./routes/home');
 var loginRouter = require('./routes/login');
 var singupRouter = require('./routes/signup');
@@ -13,6 +17,7 @@ var accountRouter = require('./routes/account');
 var helpRouter = require('./routes/help');
 var adminHomeRouter = require('./routes/admin-home');
 var adminLoginRouter = require('./routes/admin-login');
+const { UniqueConstraintError } = require('sequelize');
 
 var app = express();
 
@@ -51,5 +56,17 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+async function setup() {
+    // Create the database tables if they don't exist
+    const test = await Listing.create({title: "test", description: "test", quality: "good", price: 100.99, userid: 99});
+    const test2 = await User.create({username: "test", password: "test", email: "email@email.com", university: "university"});
+    console.log("Test user and listing created");
+}
+
+sequelize.sync({ force: true }).then(() => {
+    console.log("Sequelize Sync Completed...");
+    setup().then(() => console.log("Database setup complete"))
+})
 
 module.exports = app;
