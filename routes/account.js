@@ -63,4 +63,19 @@ router.post('/update', async (req, res, next) => {
     }
 });
 
+// Remove a listing
+router.post('/remove', async function (req, res, next) {
+    console.log('Deleting listing with ID:', req.body.id);
+    Listing.destroy({
+        where: {
+            id: req.body.id,
+        },
+    }).then(() => {
+        console.log('Listing deleted successfully!');
+    }).catch((error) => {
+        console.error('Error deleting listing:', error);
+    });
+
+    res.redirect(url = "/account");
+});
 module.exports = router;

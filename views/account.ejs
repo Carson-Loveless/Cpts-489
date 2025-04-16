@@ -66,6 +66,12 @@
                             <%=listing.quality%>
                         </li>
                     </ul>
+                    <div class="remove">
+                        <form method="POST" action="/account/remove">
+                            <input type="hidden" name="id" value="<%=listing.id%>">
+                            <button type="submit">Remove Listing</button>
+                        </form>
+                    </div>
                 </div>
             <% } %>
             </div>
