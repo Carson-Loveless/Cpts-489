@@ -27,6 +27,7 @@
             <input type="text" placeholder="Search.." name="search">
             <button type="submit"><img src="/images/search-icon.png"></button>
         </div>
+        <form action="/filter" method="post" class="filter">
         <div class="filter-container">
             <h3>Filters</h3>
             <label class="filter-option">
@@ -37,17 +38,14 @@
                 <input type="checkbox" name="filter" value="furniture"> Furniture
                 <span class="checkmark"></span>
             </label>
-            <label class="filter-option">
-                <input type="checkbox" name="filter" value="other"> Other (Location, Price, etc)
-                <span class="checkmark"></span>
-            </label>
-            <button class="apply-filters">Apply Filters</button>
+            <button type="submit" class="apply-filters">Apply Filters</button>
+        </form>
         </div>
         <div class="item-grid">
         <% for (listing of listings) { %>
             <div class="item">
                 <div class="image-container">
-                    <img src="/images/book.png" alt="Book 1">
+                    <img src= <%=listing.imageURL %>>
                 </div>
             
                 <h3><%=listing.title%></h3>

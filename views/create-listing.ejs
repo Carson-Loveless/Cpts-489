@@ -34,13 +34,27 @@
                 <label for="Price">Price</label>
                 <input type="number" id="price" name="price" required>
             </div>
-            <div class="quality-container">
-                <input type ="hidden" id="quality" name="quality" required>
-                <div class="box" id="box1" onclick="selectBox('box1')">Bad</div>
-                <div class="box" id="box2" onclick="selectBox('box2')">Poor</div>
-                <div class="box" id="box3" onclick="selectBox('box3')">Good</div>
-                <div class="box" id="box4" onclick="selectBox('box4')">Great</div>
-                <div class="box" id="box5" onclick="selectBox('box5')">Like New</div>
+            <div class="input-group">
+                <div class="quality-container">
+                    <label for="Quality">Quality</label>
+                    <input type ="hidden" id="quality" name="quality" required>
+                    <div class="box" id="box1" onclick="selectBox('box1')">Bad</div>
+                    <div class="box" id="box2" onclick="selectBox('box2')">Poor</div>
+                    <div class="box" id="box3" onclick="selectBox('box3')">Good</div>
+                    <div class="box" id="box4" onclick="selectBox('box4')">Great</div>
+                    <div class="box" id="box5" onclick="selectBox('box5')">Like New</div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="image">Image URL</label>
+                <input type="text" id="image" name="image" required>
+            </div>
+            <div class="input-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="textbook">Textbook</option>
+                    <option value="furniture">Furniture</option>
+                </select>
             </div>
             <button type="submit" class="list-btn">List Item</button>
             <button type="submit" class="cancel-btn">Cancel</button>

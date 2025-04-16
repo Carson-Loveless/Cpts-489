@@ -17,6 +17,8 @@ router.post('/', async (req, res) => {
         description: req.body.description,
         quality: req.body.quality,
         price: req.body.price,
+        imageURL: req.body.image,
+        category: req.body.category,
         userid: req.session.userId
         });
 
