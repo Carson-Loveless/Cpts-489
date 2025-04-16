@@ -44,50 +44,20 @@
             <button class="apply-filters">Apply Filters</button>
         </div>
         <div class="item-grid">
+        <% for (listing of listings) { %>
             <div class="item">
                 <div class="image-container">
                     <img src="/images/book.png" alt="Book 1">
                 </div>
-                <h3>Textbook 1</h3>
+            
+                <h3><%=listing.title%></h3>
                 <ul>
-                    <li><b>Price: </b>$20</li>
-                    <li><b>Description: </b>Textbook for a class.</li>
-                    <li><b>Quality: </b> Like New</li>
+                    <li><b>Price: </b><%=listing.price%></li>
+                    <li><b>Description: </b><%=listing.description%></li>
+                    <li><b>Quality: </b><%=listing.quality%></li>
                 </ul>
             </div>
-            <div class="item">
-                <div class="image-container">
-                    <img src="/images/desk_chair.png" alt="Item 3">
-                </div>
-                <h3>Chair 1</h3>
-                <ul>
-                    <li><b>Price: </b>$35</li>
-                    <li><b>Description: </b>Solid deskchair.</li>
-                    <li><b>Quality: </b>Good</li>
-                </ul>
-            </div>
-            <div class="item">
-                <div class="image-container">
-                    <img src="/images/book.png" alt="Book 1">
-                </div>
-                <h3>Textbook 2</h3>
-                <ul>
-                    <li><b>Price: </b>$5</li>
-                    <li><b>Description: </b>Slight wear and tear.</li>
-                    <li><b>Quality: </b>Fair</li>
-                </ul>
-            </div>
-            <div class="item">
-                <div class="image-container">
-                    <img src="/images/desk_chair.png" alt="Chair 2">
-                </div>
-                <h3>Chair </h3>
-                <ul>
-                    <li><b>Price: </b>$50</li>
-                    <li><b>Description: </b>High-quality chair, barely used.</li>
-                    <li><b>Quality: </b>Like New</li>
-                </ul>
-            </div>
+        <% } %>
         </div>
     </div>
 </div>
