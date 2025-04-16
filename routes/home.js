@@ -16,9 +16,6 @@ router.get('/', async function(req, res, next) {
 
 
 router.post('/filter', async function (req, res, next){
-    // Fetch listings based on the selected category
-
-    console.log(req.body.category); // Log the selected category
     const listings = await Listing.findAll({
         where: {
             category: req.body.filter,
