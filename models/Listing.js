@@ -24,6 +24,14 @@ Listing.init({
         type: DataTypes.FLOAT,
         allowNull: false,
     },
+    imageURL: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    category: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     userid: {
         type: DataTypes.INTEGER,
         allowNull: false,
