@@ -66,16 +66,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-async function setup() {
-    // Create the database tables if they don't exist
-    const test = await Listing.create({title: "test", description: "test", quality: "good", price: 100.99, userid: 99});
-    const test2 = await User.create({username: "carson", password: "111", email: "carson@gmail.com", name: "Carson Loveless"});
-    console.log("Test user and listing created");
-}
-
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync().then(() => {
     console.log("Sequelize Sync Completed...");
-    setup().then(() => console.log("Database setup complete"))
 })
 
 module.exports = app;
