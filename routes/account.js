@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
+const Listing = require('../models/Listing');
 
 //GET account page
 router.get('/', async (req, res, next) => {
@@ -19,12 +20,17 @@ router.get('/', async (req, res, next) => {
             return res.status(404).send('User not found');
         }
 
+        const listings = await Listing.findAll({
+            where: { userId: userId },
+        });
+
         res.render('account', {
             title: 'Account',
+            listings: listings,
             user
         });
     } catch (err) {
-        next(err);
+        next(err); 
     }
 });
 

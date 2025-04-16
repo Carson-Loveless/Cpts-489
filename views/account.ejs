@@ -46,10 +46,28 @@
 
         <div class="box">
             <div class="box-content">
-                <h2 class="header">Active Listings</h2>
-                <ul class="list3">
-                    <li>No Items Currently Listed</li>
-                </ul>
+            <h2 class="header">Active Listings</h2>
+            <% for (listing of listings) { %>
+                <div class="item">
+                    <div class="image-container">
+                        <img src=<%=listing.imageURL %>>
+                    </div>
+                    <h3>
+                        <%=listing.title%>
+                    </h3>
+                    <ul>
+                        <li><b>Price: </b>
+                            <%=listing.price%>
+                        </li>
+                        <li><b>Description: </b>`
+                            <%=listing.description%>
+                        </li>
+                        <li><b>Quality: </b>
+                            <%=listing.quality%>
+                        </li>
+                    </ul>
+                </div>
+            <% } %>
             </div>
         </div>
         <div class="box">
