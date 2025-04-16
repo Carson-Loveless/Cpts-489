@@ -12,7 +12,7 @@ body {
     width: 60%;
     display: flex;
     gap: 25px;
-    justify-self: center;
+    margin: 40px auto;
 }
 
 .box1 {
