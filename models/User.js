@@ -3,22 +3,33 @@ const { Model, DataTypes } = require('sequelize');
 
 class User extends Model { }
 User.init({
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
     username: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
     },
     password: {
         type: DataTypes.STRING,
-        allowNull: false
-    },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
     },
     email: {
         type: DataTypes.STRING,
-        allowNull: false
+        validate: {
+            isEmail: true,
+        },
+        allowNull: false,
+    },
+    university: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    isAdmin: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
     },
 }, {
     sequelize,
