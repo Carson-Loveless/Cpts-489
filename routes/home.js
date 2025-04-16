@@ -22,7 +22,10 @@ router.post('/filter', async function (req, res, next){
         },
     });
 
-    res.redirect(url = "/");
+    res.render('home', {
+        title: 'Home',
+        listings: listings,
+    });
 });
 
 module.exports = router;
