@@ -23,7 +23,7 @@ User.init({
         },
         allowNull: false,
     },
-    university: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
