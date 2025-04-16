@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="listing-container">
-        <form action="#" method="POST" class="listing-form">
+        <form method="post" class="listing-form">
             <div class="input-group">
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" required>
@@ -35,6 +35,7 @@
                 <input type="number" id="price" name="price" required>
             </div>
             <div class="quality-container">
+                <input type ="hidden" id="quality" name="quality" required>
                 <div class="box" id="box1" onclick="selectBox('box1')">Bad</div>
                 <div class="box" id="box2" onclick="selectBox('box2')">Poor</div>
                 <div class="box" id="box3" onclick="selectBox('box3')">Good</div>
@@ -49,7 +50,7 @@
     <script>
         // Keep track of the selected box
         let selectedBox = null;
-
+        let boxId = null;
         function selectBox(boxId) {
             // If a box was already selected, remove the highlight
             if (selectedBox) {
@@ -57,15 +58,19 @@
             }
 
             // Highlight the newly selected box
+
             selectedBox = boxId;
             document.getElementById(selectedBox).classList.add('selected');
-        }
+        
+            const quality = document.getElementById('quality');
+            quality.value = document.getElementById(selectedBox).innerText;
+    }
 
         // Prevent form submission if no box is selected
-        document.querySelector('.signup-form').addEventListener('submit', function (event) {
+        document.querySelector('.listing-form').addEventListener('submit', function (event) {
             if (!selectedBox) {
                 event.preventDefault();
-                alert('Please select a box before submitting.');
+                alert('Please select a quality before submitting.');
             }
         });
     </script>

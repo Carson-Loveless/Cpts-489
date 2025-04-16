@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/account-style.css">
     <link rel="stylesheet" href="/stylesheets/navbar-style.css">
 </head>
+
 <body>
     <div class="navbar">
         <a href="/">Home</a>
@@ -24,14 +26,24 @@
         <div class="box">
             <div class="box-content">
                 <h2 class="header">Account Details</h2>
-                <ul class="list1">
-                    <li>Change Username</li>
-                    <li>Change Email</li>
-                    <li>Change Password</li>
-                    <li>Change Shipping Details</li>
-                </ul>
+                <form action="/account/update" method="POST" class="account-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="<%= user.name %>" required>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="<%= user.username %>" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="<%= user.email %>" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter new password">
+
+                    <button type="submit">Update Account</button>
+                </form>
             </div>
         </div>
+
         <div class="box">
             <div class="box-content">
                 <h2 class="header">Active Listings</h2>
@@ -58,4 +70,5 @@
         </div>
     </div>
 </body>
+
 </html>
